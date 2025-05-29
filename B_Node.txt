@@ -1,0 +1,56 @@
+prog language X
+technology X
+framework X 
+library X
+software X
+
+It is Javascript runtime environment
+
+js se backend nhi bn skta
+kyuki js k pass vo functionalities nhi h jinse backend bnta h
+
+Ryan Dahl -> socha ki js se backend banna chaiye
+google chrome ka v8 engine [core of google chrome, where chrome runs whole functionalities, that codebase = engine] ka code open src h and ryan dahl uss code m chedkhani kr ra h
+fir usne socha ki hme to js m code krna h
+kyuki chrome ka v8 engine bna h c++ m pr use to js chaiye
+
+ryan dahl ne v8 ke upr ek wrapper lgaya js code ka
+
+hum js ka code likhenge
+jo ki wrapper layer of js receive kregi
+and vo code v8 engine k cpp modules k sath ek server create krega
+
+v8 + js wrapper = NODE JS
+node js is a js runtime environment
+jb tk node chl ra h, tb tk vo mahol deta h jisse backend bn skta h ya server create kr skte h
+
+
+INSTALL NODE.JS AND NPM
+node -v
+npm -v
+to check version
+
+
+node - js ka wrapper with v8 engine
+npm - packages can be uploaded and people can use it; package store
+
+WORKING WITH NODE AND NPM
+1. Initialising the project
+npm init
+package.json created (brief about dependencies, details of project) - lekha jokha of project
+
+2. HOW TO USE MODULE
+mainly File system, http modules
+
+ways in which we can require : cjs, esm - common js, es modules
+here doing cjs
+to require any module, visit Node docs, and copy require line
+
+3. RUN FILE
+node <filename>
+
+HTTP
+yhi protocol ya rule h jisko follow kre bina aap internet p na hee kuch bhej skte ho , na hee kuch manga skte ho - no request, no response
+https built on top of http
+
+HOW TO USE HTTP
