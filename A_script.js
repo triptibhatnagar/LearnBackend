@@ -1,18 +1,21 @@
 // alert("Hey")
 
-// Fundamentals of JS
-// arrays nd objects
-// functions return
-// async js coding
+// Fundamentals of JS :-
+// 1. arrays nd objects
+// 2. functions return
+// 3. async js coding
 
+// ARRAYS
 // []
 // var arr = [1,2,3,"4", {}, true, [], function() {}]
 var arr = [1,2,3,4]
+console.log(typeof arr); //object
 
-// foreach, map, indexOf find 
+// foreach, map, filter, find, indexOf
 
 // FOREACH
 // for each takes each val, do some operation on each val of arr
+// undefined return type
 arr.forEach((val) => {
     // console.log(val)
     // val = val + 2
@@ -24,17 +27,18 @@ arr.forEach((val) => {
 // used to create new arr from a given arr
 var ans = arr.map((val) => {
     // return val*2
-    return 12
+    return 12 // return to that blank space, created in new arr
 })
 console.log(ans)
 
 // FILTER
-// -> filter the arr val on a specifuc condition
+// -> filter the arr val on a specific condition
 // used to create new arr where size of new arr can be equal or less than given arr
 // return true or false
 var ans = arr.filter((val) => {
     return val>=2
 })
+// jin cases k liye ye condition true hogi, vhi value new arr m jaygi
 console.log(ans)
 
 // FIND
@@ -42,13 +46,13 @@ console.log(ans)
 // give first occ
 var ans  = arr.find((val) => {
     if (val == 12) {
-        return val
+        return val // undefined as its not there
     }
 })
 console.log(ans)
 
 // INDEXOF
-console.log(arr.indexOf(12))
+console.log(arr.indexOf(12)) //-1
 console.log(arr.indexOf(1))
 
 
@@ -61,9 +65,9 @@ var obj = {
     age: 12
 }
 // FRREZE
-Object.freeze(obj) // to not change the obj
+Object.freeze(obj) // to not change the obj values
 
-// DOT NOTATION, SQUARE NOTATION
+// DOT NOTATION, SQUARE NOTATION - to access values
 console.log(obj.name)
 console.log(obj["name"])
 obj.age = 89
@@ -76,12 +80,11 @@ function abcd() {
 function abcd2(a,b,c) {
 
 }
-// FUNCTION LENGTH = no of parameters
+// FUNCTION LENGTH = no of parameters because function is an object, so it has a property of length
 console.log(abcd.length) //0
 console.log(abcd2.length) //3
-// function length = no of parameters because function is an object
 
-// RETURN
+// RETURN - move the control of program
 function abcd() {
     return 12;
 }
@@ -99,23 +102,24 @@ console.log(abcd())
 
 async function abcd() {
     var blob = await fetch(`https://randomuser.me/api`)
+    // console.log("BLOB DATA: ",blob)
     var ans = await blob.json()
-    console.log(ans)
+    console.log("JSON DATA: ",ans)
     console.log(ans.results[0].name)
 }
+// here, blob is actually a Response object returned by the fetch() API.
+// fetch() returns a Promise that resolves to a Response object.
+// fetch() is used to make HTTP requests.
+// It returns a Promise that resolves to a Response object, which represents the entire HTTP response (including headers, status, and body).
+
+// The Response object is just a wrapper around the HTTP response.
+// The body inside it is not directly usable.
+// .json() is used to parse and extract JSON data into a JS object you can work with.
+
+
 abcd()
 // fetch is asynchronous by nature and non blocking
 
 // async function abcd() {
 //      await
 // }
-
-/**
- * Node js basics
- * Introduction to Node js
- * Installing Node js and npm
- * Working with modules
- * 
- * File system operations
- * Understanding HTTP module
- */

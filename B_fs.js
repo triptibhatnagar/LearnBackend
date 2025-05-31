@@ -43,7 +43,7 @@ fs.unlink("hello.txt", function(err) {
 })
 
 // rmdir - remove directory
-// removes blank directory or folder
+// removes blank directory or folder by default
 // fs.rmdir("./copy", function(err) {
 //     if(err) console.log(err)
 //     else console.log("done")
@@ -63,7 +63,7 @@ fs.unlink("hello.txt", function(err) {
 // })
 
 // folder kese bnta h, folder/file ko read kese krte h
-//  the data returned is a Buffer by default, not a string.
+// the data returned is a Buffer by default, not a string.
 // fs.readFile("hey.txt", function(err, data) {
 //     if(err) console.error(err)
 //     else {

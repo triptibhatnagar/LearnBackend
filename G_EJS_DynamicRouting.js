@@ -35,26 +35,26 @@ app.set('view engine', 'ejs') // backend will render or view ejs pages
 app.get("/" ,(req, res) => {
     // render 
     // page which must exist in views is wriiten in render
-    res.render("index") //.ejs not required because rendre hmesha vhi view hoga jo aapne set up kiya hoga jese ki yha pr ejs
+    res.render("index") //.ejs not required because render hmesha vhi view hoga jo aapne set up kiya hoga jese ki yha pr ejs
 })
 
-// setting up public static files
-// app.use(express.static("yha p sara path aayeg a jaha pr static files ko serach krna h"))
+// SETTING UP PUBLIC STATIC FILES
+// app.use(express.static("yha p sara path aayega jaha pr static files ko serach krna h"))
 // create a folder at root level
 
-// what is dynamic routing
+// WHAT IS DYNAMIC ROUTING
 // hum log kyi baar kuch routes dekhte h, unme sirf ek hee hissa change hota h
 // /author/harsh
 // /author/harshita
 // /author/harshika
-// do we have to create diff routes fro all these
+// do we have to create diff routes for all these
 
 // sbse phle browser pr jao
 // url likho apna jo chaiye
 // enter dabao
 // create that url route
 // res send kuch b
-// ab usi url ko dynamic bnana h, then realise konsa part dynamic aur uss part k aage route m colon lgado
+// ab usi url ko dynamic bnana h, then realise konsa part dynamic h aur uss part k aage route m colon lgado
 // now this username has become a variable, jo b url iss pattern ko match krega ye route chl jayega
 // after colon part is dynamic
 // req.params -> aesa kuch b jiske aage : h

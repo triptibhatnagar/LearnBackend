@@ -1,3 +1,11 @@
+ * NODE JS BASICS
+ * Introduction to Node js
+ * Installing Node js and npm
+ * Working with modules
+ * File system operations
+ * Understanding HTTP module
+
+NODE JS
 prog language X
 technology X
 framework X 
@@ -35,7 +43,7 @@ node - js ka wrapper with v8 engine
 npm - packages can be uploaded and people can use it; package store
 
 WORKING WITH NODE AND NPM
-1. Initialising the project
+1. Initialising the project and its basic usage
 npm init
 package.json created (brief about dependencies, details of project) - lekha jokha of project
 
@@ -52,5 +60,3 @@ node <filename>
 HTTP
 yhi protocol ya rule h jisko follow kre bina aap internet p na hee kuch bhej skte ho , na hee kuch manga skte ho - no request, no response
 https built on top of http
-
-HOW TO USE HTTP

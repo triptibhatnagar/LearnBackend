@@ -5,7 +5,6 @@
   "license": "ISC",
   "author": "Tripti Bhatnagar",
   "type": "commonjs",
-  "main": "G_EJS_DynamicRouting.js",
   "scripts": {
     "start": "node ./D.js",
     "tripti": "echo \"Hey Tripti!! How are you??\"",

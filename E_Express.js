@@ -1,4 +1,4 @@
-// express.js framework
+// EXPRESS.JS FRAMEWORK
 // introduction to expressjs
 // Setting up a basic express application
 // Routing
@@ -6,6 +6,8 @@
 // Request and response handling
 // Error handling
 
+
+// EXPRESS
 // MERN stack - _ Express _ _
 // express js ek npm pkg h
 // framework -> gives you a "flow", tell konsi cheez krni h, kesi krni h vo aap kisi b trh kr skte ho
@@ -13,17 +15,15 @@
 // react is library
 // express is framework
 
-// express manages evrything from receiving the req and giving back the response
+// express manages everything from receiving the req and giving back the response
 
 
-
-
-// Setting up a basic express application
-// Routing
+// SETTING UP A BASIC EXPRESS APPLICATION
 
 // const express = require('express')
 // const app = express()
 
+// ROUTING
 // app.get(route, requestHandler)
 // requestHandler is a middleware
 
@@ -42,8 +42,7 @@
 // Eg of routes - abc.com/, x.com/, youtube.com/ ('/' is route here)
 
 
-
-// Middleware
+// MIDDLEWARE
 // jb b server req accept krta h, vha se route k beech pahuchne tk agr aap uss req ko beech m rokte ho and kuch perform krte ho, toh ye elm middleware kehlata h
 // koi b route chle usse phle kuch kaam krna h to middleware is used
 // 2 ways to use 
@@ -51,6 +50,7 @@
 
 // 1. use -> (req,res,next)
 // 2. app.get(route, middleware, reqHandler)
+
 // app.use(function(req, res, next) {
 //     console.log("middleware chlao")
 //     // but the loader keeps on rounding, req comes, but not yet forwarded, so next is used
@@ -65,8 +65,9 @@
 //     res.send("Hellooo Worrldd")
 // })
 
+// FRONTEND BACKEND FRONTEND
 
-// erorr handling
+// ERROR HANDLING
 // there exists a default error handler
 // always wriiten at last
 
@@ -74,6 +75,7 @@
 // app.get('/profile', function(req, res, next) {
 //     return next(new Error("Something went wrong")) // goes to console
 // })
+// default error handler
 // app.use(function(err, req, res, next) {
 //     console.error(err.stack)
 //     res.status(500).send("Something broke!")// goes to frontend

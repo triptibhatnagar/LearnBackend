@@ -8,7 +8,7 @@
 // website -> ask for photo -> website asks for login -> you login -> get photo -> and close -> now server dont know about u
 // everytime u visit and ask for photo -> you have to login
 
-// hm log kuch b data frontend pr browser pr rkh skte h and jb b aap kuch b req backend p kroge vo frontend pr saved data automatically backend pr chla jega
+// hm log kuch b data frontend pr browser pr rkh skte h (i.e. cookie) and jb b aap kuch b req backend p kroge vo frontend pr saved data automatically backend pr chla jega
 
 // so login krne k baad ek string server aapko dega and jb b aap vapas se req kroge to end m ye string b boldena
 // string browser m stored hogi aapke, aap koi b req kroge uspe, to vo string chipak k jayegi
