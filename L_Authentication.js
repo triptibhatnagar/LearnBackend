@@ -17,12 +17,13 @@
 // 2. bcrypt kese use krte h for encryption and decryption
 // 3. jwt kya h and jwt m data kese store kre and bahar nikale
 
-// const cookieParser = require("cookie-parser")
+const cookieParser = require("cookie-parser")
 const express = require("express")
 const app = express()
-const bcrypt = require('bcrypt')
+// const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
-// app.use(cookieParser())
+app.use(cookieParser())
 
 app.get('/', (req, res) => {
     // setting cookie
@@ -38,11 +39,23 @@ app.get('/', (req, res) => {
 
 
     // DECRYPTION OR BASICALLY COMPARE
-    bcrypt.compare("helloworld", "$2b$10$oI6HWfXwMZRAswZk7aQCSu0il0bcndkKjUyGAzrmVfrA0zlDKNRD6", (err, result) => {
-        console.log(result) //true
-    })
+    // bcrypt.compare("helloworld", "$2b$10$oI6HWfXwMZRAswZk7aQCSu0il0bcndkKjUyGAzrmVfrA0zlDKNRD6", (err, result) => {
+    //     console.log(result) //true
+    // })
+
+
+    let token = jwt.sign({email: "abcd@example.com"}, "secret") // "secret" is very very secret if anyone will know this then they can hack
+    // console.log(token)// ye browser p bhejte h
+    res.cookie("token", token)
+    res.send("done")
 })
 
+app.get("/read", (req, res) => {
+    // console.log(req.cookies.token)
+    // backend p token aagya, iss token ka data nikalna h ab
+    let data = jwt.verify(req.cookies.token, "secret")
+    console.log(data)// { email: 'abcd@example.com', iat: 1749019978 }
+})
 
 // app.get('/read', (req, res) => {
     // ab cookie iske sath b chipak k jaygi
@@ -57,4 +70,11 @@ app.get('/', (req, res) => {
 // more better algo - sha-256
 // to convert pwd into a big random string: bcrypt is used
 
+
+
+// jwt 3 hisso se bnta h and usme se 1 hissa mainly kaam ka h
+// header[algorithm rel data], payload[your data], signature = sb ikathe
+// jwt in 3no ko alg krdeta h
+// payload se pta lg jega ki ye bnda h kon usually email as it is unique'
+// to agli barr puchna ni pdega ki tum kon ho
 app.listen(3000)
