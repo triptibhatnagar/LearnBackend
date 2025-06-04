@@ -29,12 +29,18 @@ app.get('/', (req, res) => {
     // res.cookie("name", "abcd")
     // saltRounds = 10 (default)
     // ENCRYPTION
-    bcrypt.genSalt(10, function(err, salt) {
-        bcrypt.hash("helloworld", salt, function(err, hash) {
-            console.log(hash) // this is your encrypted pwd or hashed pwd
-        })
+    // bcrypt.genSalt(10, function(err, salt) {
+    //     bcrypt.hash("helloworld", salt, function(err, hash) {
+    //         console.log(hash) // this is your encrypted pwd or hashed pwd
+    //     })
+    // })
+    // res.send("done")
+
+
+    // DECRYPTION OR BASICALLY COMPARE
+    bcrypt.compare("helloworld", "$2b$10$oI6HWfXwMZRAswZk7aQCSu0il0bcndkKjUyGAzrmVfrA0zlDKNRD6", (err, result) => {
+        console.log(result) //true
     })
-    res.send("done")
 })
 
 
