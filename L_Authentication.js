@@ -17,21 +17,38 @@
 // 2. bcrypt kese use krte h for encryption and decryption
 // 3. jwt kya h and jwt m data kese store kre and bahar nikale
 
-const cookieParser = require("cookie-parser")
+// const cookieParser = require("cookie-parser")
 const express = require("express")
 const app = express()
+const bcrypt = require('bcrypt')
 
-app.use(cookieParser())
+// app.use(cookieParser())
 
 app.get('/', (req, res) => {
     // setting cookie
-    res.cookie("name", "abcd")
+    // res.cookie("name", "abcd")
+    // saltRounds = 10 (default)
+    // ENCRYPTION
+    bcrypt.genSalt(10, function(err, salt) {
+        bcrypt.hash("helloworld", salt, function(err, hash) {
+            console.log(hash) // this is your encrypted pwd or hashed pwd
+        })
+    })
     res.send("done")
 })
-app.get('/read', (req, res) => {
+
+
+// app.get('/read', (req, res) => {
     // ab cookie iske sath b chipak k jaygi
-    console.log(req.cookies)//{ name: 'abcd' }
-    res.send("read page")
-})
+    // console.log(req.cookies)//{ name: 'abcd' }
+    // res.send("read page")
+// })
+
+// salt - random string
+// hash - password coded
+// salt + hash - another random string hence pwd can't be decrypted
+// Eg - password => qbttxpse [algorithm - +1 in every char]
+// more better algo - sha-256
+// to convert pwd into a big random string: bcrypt is used
 
 app.listen(3000)
