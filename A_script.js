@@ -45,9 +45,7 @@ console.log(ans)
 // find something in arr
 // give first occ
 var ans  = arr.find((val) => {
-    if (val == 12) {
-        return val // undefined as its not there
-    }
+    val == 12;
 })
 console.log(ans)
 
